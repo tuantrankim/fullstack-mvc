@@ -21,3 +21,22 @@ PM> add-migration InitialModel
 
 Update migration to database
 PM> update-database
+
+Add new model (class) Gig.cs
+Create Gigs and Genres DbSet in ApplicationDbContext in IdentityModel.cs
+```
+public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
+    {
+        public DbSet<Gig> Gigs { get; set; }
+        public DbSet<Genre> Genres { get; set; }
+        ...
+    }
+```
+Add a migration name CreateGigTable
+PM> add-migration CreateGigTable
+
+to overwrite, using -force
+PM> add-migration CreateGigTable -force
+
+Rollback database to a TargetMigration
+PM> Update-Database -TargetMigration 202004220009554_CreateGigTable
