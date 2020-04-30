@@ -40,3 +40,16 @@ PM> add-migration CreateGigTable -force
 
 Rollback database to a TargetMigration
 PM> Update-Database -TargetMigration 202004220009554_CreateGigTable
+
+
+## Adding font family from google
+```
+https://fonts.google.com/
+select Open San, Lato, and Montserrat (regular 400 and bold 700)
+copy/paste the style to _Layout.cshtml
+
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Lato:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+before 
+@Styles.Render("~/Content/css")
+
+```
