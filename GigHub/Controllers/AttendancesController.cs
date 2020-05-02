@@ -20,7 +20,7 @@ namespace GigHub.Controllers
         }
 
         /*
-         * API call: https://localhost:44328/api/attendances/
+         * POST: api/attendances/
         */
         [HttpPost]
         //scalar need [FromBody]. Object type doesn't need.
