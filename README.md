@@ -10,6 +10,9 @@ visual studio 2019
 dotnet framework 4.7.2
 
 ### Package Management Console
+#### Reinstall nuget package without updating to latest version
+PM> Update-Package -reinstall
+
 #### Enable code first migration
 PM> enable-migrations
 
